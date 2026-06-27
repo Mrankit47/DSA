@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    int firstnumber,secondnumer,operation,Result;
-    
+    int firstnumber,secondnumer,Result;
+    char operation;
     cout<<"Enter first number : ";
     cin>>firstnumber;
     cout<<"Enter second number : ";
@@ -13,7 +13,30 @@ int main()
     cout<<"Enter (+ , - , * , /) these operations : ";
     cin>>operation;
 
-    Result = firstnumber , operation ,secondnumer;
+    if (operation == '+')
+    {
+        Result = firstnumber+secondnumer;
+        cout<<Result<<endl;
+    }
+    else if(operation == '-')
+    {
+        Result = firstnumber-secondnumer;
+        cout<<Result<<endl;
+    }
+    else if(operation == '*')
+    {
+        Result = firstnumber*secondnumer;
+        cout<<Result<<endl;
+    }
+    else if(operation == '/')
+    {
+        Result = firstnumber/secondnumer;
+        cout<<Result<<endl;
+    }
+    else{
+    cout<<"invalid number";
+    }
 
-    cout<<Result;
+    return 0;
+    
 }
