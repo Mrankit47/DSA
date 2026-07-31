@@ -25,5 +25,3 @@ int main ()
 
 
 }
-
-21 minits
