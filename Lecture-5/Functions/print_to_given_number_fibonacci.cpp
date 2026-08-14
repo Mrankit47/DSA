@@ -1,22 +1,28 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int fibonacci(int number)
-{   
-    int fib=1;
-    for(int i=0; i<=number; i++)
+void fibonacci(int n)
+{
+    int a = 0, b = 1;
+
+    for (int i = 1; i <= n; i++)
     {
-        fib+=i;
-        cout<<fib<<" ";
+        cout << a << " ";
+
+        int next = a + b;
+        a = b;
+        b = next;
     }
 }
 
 int main()
 {
-    int number;
-    cout<<"enter any number : ";
-    cin>>number;
+    int n;
 
-    fibonacci(number);
+    cout << "Enter number of terms: ";
+    cin >> n;
+
+    fibonacci(n);
+
     return 0;
 }
