@@ -11,11 +11,22 @@ int main()
     for(int i=1; i<=size; i++)
     {
         cout<<"enter "<<i<<" number : ";
-        cin>>marks[size];
+        cin>>marks[i];
     }
+    
+    cout<<"[";
     for(int i=0; i<size; i++)
-    {
-        cout<<marks[size]<<endl;
+    {   
+        cout<<marks[i];
+        if(i== size-1)
+        {
+            break;
+        }
+        else
+        {
+            cout<<",";
+        }
     }
+    cout<<"]";
     return 0;
 }
