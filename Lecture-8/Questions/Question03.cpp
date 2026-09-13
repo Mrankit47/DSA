@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 
-int unique(int arr[],int size)
+void unique(int arr[],int size)
 {
     for(int i=0; i<size; i++)
     {
