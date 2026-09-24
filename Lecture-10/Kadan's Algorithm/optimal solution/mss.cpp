@@ -17,6 +17,6 @@ int main()
             sum=0;
         }
     }
-    cout<<"max subarray sum : "<<sum;
+    cout<<"max subarray sum : "<<maxsum;
     return 0;
 }
