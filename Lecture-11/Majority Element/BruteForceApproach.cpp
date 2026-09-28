@@ -1,32 +1,37 @@
-// Leetcode question no 169
-// bruteforceapproach
-
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
 
-vector<int> majorityElement(vector<int>arr)
+int majorityElement(vector<int> arr)
 {
-    int freq = 0,n=arr.size();
-    for(int i=0; i<n; i++)
+    int n = arr.size();
+
+    for (int val : arr)
     {
-        for(int j=0; j<n; j++)
+        int freq = 0;
+
+        for (int el : arr)
         {
-            if(arr[i]==arr[j])
+            if (el == val)
             {
-                freq+=1;
+                freq++;
             }
         }
-    }
-    if(freq>(n/2))
-    {
-        cout<<freq;
+
+        if (freq >= n / 2)
+        {
+            return val;
+        }
     }
 
+    return -1;
 }
 
 int main()
 {
-    vector<int>arr = {1,2,2,1,1};
-    majorityElement(arr);
+    vector<int> arr = {1, 2, 2,4, 3, 3, 3,4,4,4,4,4};
+
+    cout << majorityElement(arr);
+
+    return 0;
 }
